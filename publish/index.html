@@ -28,10 +28,7 @@
 
         <nav class="gnb__wrap">
           <h2 class="blind">주메뉴</h2>
-          <!-- TODO: 2depth가 열렸을 경우, is-expand 클래스 추가 -->
           <ul id="gnb" class="gnb">
-            <!-- TODO: is-active 선택된 메뉴 li에 클래스 추가
-            확인용 클래스 : 마이페이지 -->
             <!-- 링크 -> a / 2뎁스 버튼 -> button:button -->
             <li class="gnb__item"><a href="#" class="gnb__link">
               <span>예매</span>
@@ -49,14 +46,12 @@
             <li class="gnb__item"><a href="#" class="gnb__link">
               <span>공지사항</span>
             </a></li>
-            <li class="gnb__item is-active">
+            <li class="gnb__item">
               <button type="button" class="gnb__link">
                 <span>마이페이지</span>
               </button>
               <ul class="gnb__2depth">
-                <!-- TODO: is-active 선택된 메뉴 li에 클래스 추가
-                확인용 클래스 : first-child -->
-                <li class="gnb__2depth-item is-active">
+                <li class="gnb__2depth-item">
                   <a href="#" class="gnb__2depth-link">
                     <span>예매/취소 내역</span>
                   </a>
