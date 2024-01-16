@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <script src="js/admin.js"></script>
+    <title>관리자 페이지</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3">
+                <div class="position-sticky">
+                    <div class="icon">
+                        <p><img src="images/admin-icon.png"></p>
+                        <p>관리자</p>
+                        <hr>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#user-management">
+                                회원 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movie-management">
+                                영화 관리
+                            </a>
+                        </li>
+                        <li class="nav-item" id="theater-management-item">
+                            <a class="nav-link" href="theater_management.html">
+                                영화관 관리
+                            </a>
+                            <!-- '영화관 관리' 메뉴의 하위 메뉴 -->
+                            <ul id="theater-submenu">
+                                <li><a href="">영화관 추가</a></li>
+                                <li><a href="">영화관 삭제</a></li>
+                                <li><a href="">상영시간표 관리</a></li>
+                            </ul> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservation-management">
+                                예매 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#board-management">
+                                게시판 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product-management">
+                                상품 관리
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="content" class="col-md-9">
+                <!-- 영화관 추가 페이지 -->
+                <div id="add-theater" class="page">
+                    <h2>영화관 관리</h2>
+                    <div class="sub_content">
+                        <h3>영화관 추가</h3>
+                        <form action="" method="" id="add-theater-list">
+                            <div>
+                                <p><strong class="required">＊</strong>추가할 영화관 이름 > </p>
+                                <input type="text" id="tt_name" name="tt_name" placeholder="지역이름을 포함해주세요.">
+                            </div>
+
+                            <input type="button" id="add_screen">
+                            <label for="add_screen">상영관 추가</label> 
+                            
+                            <div id="list_src_name">
+                                <p><strong class="required">＊</strong>추가할 상영관 이름 > </p>
+                                <input type="text" id="scr_name" name="scr_name" placeholder="상영관 이름을 설정해주세요.">
+                            </div>
+                            <div id="list_src_price">
+                                <p><strong class="required">＊</strong>해당 상영관 가격 > </p>
+                                <input type="text" id="scr_price" name="scr_price" placeholder="상영관 가격을 설정해주세요.">
+                            </div>
+                            
+                            <div>
+                                <p><strong class="required">＊</strong>해당 상영관 수용 좌석 개수 > </p>
+                                <label for="seat_row">좌석 행 : </label>
+                                <select name="seat_row">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                                <option value="I">I</option>
+                                <option value="J">J</option>
+                                </select>
+                                <label for="seat_column">좌석 열 : </label>
+                                <select name="seat_column">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                </select>
+                            </div>
+
+                            <div>
+                            <label for="tt_img"><strong class="required">＊</strong>이미지 업로드 > </label>
+                            <input type="text" id="tt_img" name="tt_img" placeholder="영화관 사진을 업로드해주세요.">
+                            </div>
+
+                            <div>
+                            <label for="tt_address"><strong class="required">＊</strong>영화관 주소 > </label>
+                            <input type="text" id="tt_address" name="tt_address" placeholder="영화관 주소를 입력해주세요.">
+                            </div>
+
+                            <div>
+                            <label for="tt_tel"><strong class="required">＊</strong>전화번호 > </label>
+                            <input type="text" id="tt_tel" name="tt_tel" placeholder="영화관 전화번호를 입력해주세요.">
+                            </div>
+
+                            <div>
+                            <p><strong class="required">＊</strong>영업시간 > </p>
+                            <input type="time" id="tt_start" name="tt_start" >
+                            <input type="time" id="tt_close" name="tt_close" >
+                            </div>
+
+                            <input type="button" value="추가하기" id="add-theater-btn">
+                        </form>
+
+                    </div>
+                </div>
+            </main>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

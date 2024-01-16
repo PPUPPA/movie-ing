@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <script src="js/admin.js"></script>
+    <title>관리자 페이지</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3">
+                <div class="position-sticky">
+                    <div class="icon">
+                        <p><img src="images/admin-icon.png"></p>
+                        <p>관리자</p>
+                        <hr>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#user-management">
+                                회원 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movie-management">
+                                영화 관리
+                            </a>
+                        </li>
+                        <li class="nav-item" id="theater-management-item">
+                            <a class="nav-link" href="theater_management.html">
+                                영화관 관리
+                            </a>
+                            <!-- '영화관 관리' 메뉴의 하위 메뉴 -->
+                            <ul id="theater-submenu">
+                                <li><a href="add_theater.html">영화관 추가</a></li>
+                                <li><a href="">영화관 삭제</a></li>
+                                <li><a href="">상영시간표 관리</a></li>
+                            </ul> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservation-management">
+                                예매 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#board-management">
+                                게시판 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product-management">
+                                상품 관리
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="content" class="col-md-9">
+                <!-- 영화관 수정 페이지 -->
+                <div id="revise-theater" class="page">
+                    <h2>영화관 관리</h2>
+                    <div class="sub_content">
+                        <h3>영화관 수정</h3>
+                        <p id="exp"><strong class="required">**</strong>변경사항을 새로 작성해주세요.</p>
+                        <form action="" method="">
+                            <div class="list-revise-theater">
+                                <p>영화관 이름 > </p>
+                                <input type="text" id="tt_name" name="tt_name" value="">
+                            </div>
+                            <!-- 상영관 수정 pt. -->
+                            <div>
+                                <button id="revise-scr-btn">상영관 수정</button>
+                            </div>
+                            <div>
+                            <div class="list-revise-theater">
+                                <P>상영관 선택 </p>
+                                <select name="scr_name">
+                                    <!-- 보유 상영관 드랍다운으로 다 보여주기  -->
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="list-revise-theater">
+                                <p>상영관 이름 > </p>
+                                <input type="text" id="scr_name" name="scr_name" value="">
+                            </div>
+                            <div id="" class="list-revise-theater">
+                                <p>상영관 가격 > </p>
+                                <input type="text" id="scr_price" name="scr_price" value="">
+                            </div>
+                            </div>
+
+                            <div id="" class="list-revise-theater">
+                                <p>전화번호 > </p>
+                                <input type="text" id="tt_tel" name="tt_tel" value="">
+                            </div>
+
+                            <div id="" class="list-revise-theater">
+                                <p>영업시간 > </p>
+                                <input type="time" id="tt_start" name="tt_start" value="">
+                                <input type="time" id="tt_close" name="tt_close" value="">
+                            </div>
+
+                            <input type="button" value="변경하기" id="revise-theater-btn">
+                        </form>
+                    
+                    </div>
+                </div>
+            </main>
+    
+    
+    
+          
+        </div>
+    </div>
+</body>
+    
+</html>

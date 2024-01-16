@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <script src="js/admin.js"></script>
+    <title>관리자 페이지</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3">
+                <div class="position-sticky">
+                    <div class="icon">
+                        <p><img src="images/admin-icon.png"></p>
+                        <p>관리자</p>
+                        <hr>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#user-management">
+                                회원 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movie-management">
+                                영화 관리
+                            </a>
+                        </li>
+                        <li class="nav-item" id="theater-management-item">
+                            <a class="nav-link" href="theater_management.html">
+                                영화관 관리
+                            </a>
+                            <!-- '영화관 관리' 메뉴의 하위 메뉴 -->
+                            <ul id="theater-submenu">
+                                <li><a href="add_theater.html">영화관 추가</a></li>
+                                <li><a href="">영화관 삭제</a></li>
+                                <li><a href="">상영시간표 관리</a></li>
+                            </ul> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservation-management">
+                                예매 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#board-management">
+                                게시판 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product-management">
+                                상품 관리
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="content" class="col-md-9">
+                <!-- 상영관 관리 페이지 -->
+                <div id="screen-management" class="page">
+                    <h2>상영관 관리</h2>
+                    <div class="sub_content">
+                        <h4>ex 압구정 시네마</h4>
+                        <hr>
+
+                        <table id="sm">
+                            <thead>
+                                <tr><th scope="row"></th>
+                                    <th scope="row">좌석 수</th>
+                                    <th scope="row">보류 좌석</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="">ex 상영관1</a></td>
+                                    <td>50</td>
+                                    <td>3</td>
+                                    <td>
+                                        <input type="button" value="상영관 보류" id="stop-scr-btn">
+                                    </td>
+                                 
+                                </tr>
+                                 <tr>
+                                    <td><a href="">ex 상영관2</a></td>
+                                    <td>100</td>
+                                    <td>1</td>
+                                    <td>
+                                        <input type="button" value="상영관 보류" id="stop-scr-btn">
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                
+                        <section style="min-height: 300px;"></section>
+                    </div>
+                    
+                </div>
+            </main>
+    
+    
+    
+          
+        </div>
+    </div>
+</body>
+    
+</html>

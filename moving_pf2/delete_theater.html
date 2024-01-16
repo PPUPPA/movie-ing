@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <script src="js/admin.js"></script>
+    <title>관리자 페이지</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3">
+                <div class="position-sticky">
+                    <div class="icon">
+                        <p><img src="images/admin-icon.png"></p>
+                        <p>관리자</p>
+                        <hr>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#user-management">
+                                회원 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movie-management">
+                                영화 관리
+                            </a>
+                        </li>
+                        <li class="nav-item" id="theater-management-item">
+                            <a class="nav-link" href="theater_management.html">
+                                영화관 관리
+                            </a>
+                            <!-- '영화관 관리' 메뉴의 하위 메뉴 -->
+                            <ul id="theater-submenu">
+                                <li><a href="add_theater.html">영화관 추가</a></li>
+                                <li><a href="">영화관 삭제</a></li>
+                                <li><a href="">상영시간표 관리</a></li>
+                            </ul> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reservation-management">
+                                예매 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#board-management">
+                                게시판 관리
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product-management">
+                                상품 관리
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="content" class="col-md-9">
+                <!-- 영화관 삭제 페이지 -->
+                <div id="delete-theater" class="page">
+                    <h2>영화관 관리</h2>
+                    <div class="sub_content">
+                        <h3>영화관 삭제</h3>
+                        <table>
+                            <thead>
+                                <tr><th scope="row"></th>
+                                    <th scope="row">상영관 개수</th>
+                                    <th scope="row">영화관 주소</th>
+                                    <th scope="row">영화관 번호</th>
+                                    <th scope="row">영업시간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="">ex 강남관</a></td>
+                                    <td>4</td>
+                                    <td>주소</td>
+                                    <td>01.2345.345</td>
+                                    <td>9:00 - 24:00</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="">ex 강남관2</a></td>
+                                    <td>4</td>
+                                    <td>주소2</td>
+                                    <td>01.2345.345</td>
+                                    <td>9:00 - 24:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <section style="min-height: 200px;"></section>
+
+                    </div>
+                </div>
+            </main>
+    
+    
+    
+          
+        </div>
+    </div>
+    
+</body>
+    
+</html>
