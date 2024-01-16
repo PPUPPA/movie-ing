@@ -1,16 +1,32 @@
 
 $(function(){
+  // GNB
   isGnbExpand();
 
-  $(".gnb .gnb__link").on("mouseover focusin", function(){
-    $(this).parent(".gnb__item").addClass("is-active");
-    
+  $(".gnb .gnb__item").on("mouseover focusin", function(){
+    $(this).addClass("is-active");
     isGnbExpand();
   });
 
-  $(".gnb .gnb__link").on("mouseout focusout", function(){
-    $(this).parent(".gnb__item").removeClass("is-active");
+  $(".gnb .gnb__item").on("mouseout focusout", function(){
+    $(this).removeClass("is-active");
+    isGnbExpand();
   });
+
+  // SRCH INPUT
+  $(".board-head .srch-box .btn-del").click(function(){
+		$(this).prev(".inp").val("");
+		$(this).hide();
+		$(this).next(".btn-srch").click();
+	});
+
+	$(".board-head .srch-box .inp").on("input", function(){
+		if($(this).val() == ""){
+			$(this).siblings(".btn-del").hide();
+		}else{
+			$(this).siblings(".btn-del").show();
+		}
+	});
 });
 
 // function

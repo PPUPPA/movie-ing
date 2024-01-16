@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,13 @@
   <link rel="stylesheet" href="assets/css/component.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <script src="assets/js/common.js"></script>
-  
+
   <!-- page -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/board.css">
   <title>무빙</title>
 </head>
-<body> 
+
+<body>
   <!-- root -->
   <div id="root">
     <header id="header" class="header">
@@ -31,21 +33,21 @@
           <ul id="gnb" class="gnb">
             <!-- 링크 -> a / 2뎁스 버튼 -> button:button -->
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>예매</span>
-            </a></li>
+                <span>예매</span>
+              </a></li>
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>영화</span>
-            </a></li>
+                <span>영화</span>
+              </a></li>
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>영화관</span>
-            </a></li>
+                <span>영화관</span>
+              </a></li>
             <!-- TODO: 스낵 진행시 주석제거 -->
             <!-- <li class="gnb__item"><a href="#" class="gnb__link">
               <span>스낵</span>
             </a></li> -->
             <li class="gnb__item"><a href="noticeList.html" class="gnb__link">
-              <span>공지사항</span>
-            </a></li>
+                <span>공지사항</span>
+              </a></li>
             <li class="gnb__item">
               <button type="button" class="gnb__link">
                 <span>마이페이지</span>
@@ -94,7 +96,71 @@
     <main id="main" class="main">
       <h2 class="blind">메인 컨텐츠</h2>
       <div id="container" class="container">
-        <!-- 컨텐츠 영역 -->
+        <div class="as_board-list">
+          <div class="list-tabs type2">
+            <span class="list-tabs__item is-active">공지사항</span>
+          </div>
+
+          <div class="as_board-list__head">
+            <h3 class="as_board-list__notice">총 <strong>N개</strong>의 게시글이 있습니다.</h3>
+            <div class="srch-box">
+              <div class="select-box">
+                <select id="srchKey" class="select">
+                  <option value="TitleNm">제목</option>
+                  <option value="ContentsNm">내용</option>
+                </select>
+              </div>
+              <div class="inp-box">
+                <label>
+                  <input type="text" id="srchVal" class="inp bg-none" value="" placeholder="검색어를 입력해주세요.">
+                </label>
+                <button type="button" class="btn-del"><span class="blind">입력 내용 삭제</span></button>
+                <button type="button" class="btn-srch"><span class="blind">입력어로 검색</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="as_board-list__table">
+            <table>
+              <colgroup>
+                <col style="width:10%">
+                <col>
+                <col style="width:13%">
+                <col style="width:13%">
+                <col style="width:12%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>제목</th>
+                  <th>구분</th>
+                  <th>등록일</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- TODO: 페이지당 10개 게시글 -->
+                <tr>
+                  <td>no</td>
+                  <td>
+                    <a href="noticeDetail.html">게시글 제목</a>
+                  </td>
+                  <td>작성자</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>조회수</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagenate">
+            <a href="#" class="prev"><span class="blind">이전 페이지</span></a>
+            <a href="#" class="is-active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next"><span class="blind">다음 페이지</span></a>
+          </div>
+        </div>
       </div>
     </main>
     <!-- //main -->
@@ -104,8 +170,10 @@
       <div class="footer__inner">
         <i class="footer__logo"><img src="assets/images/common/logo--gray.png" alt="무빙"></i>
         <ul class="footer__util">
-          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link">이용약관</a></li>
-          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link footer__privacy">개인정보처리방침</a></li>
+          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link">이용약관</a>
+          </li>
+          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림"
+              class="footer__util-link footer__privacy">개인정보처리방침</a></li>
         </ul>
         <ul class="footer__info">
           <li class="footer__info-item">(06129) 서울특별시 강남구 강남대로96길 16 2층~5층 (역삼동, 원성빌딩)</li>
@@ -126,4 +194,5 @@
   </div>
   <!-- // layer 영역: modal, toast etc,. -->
 </body>
+
 </html>

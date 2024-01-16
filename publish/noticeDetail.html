@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,13 @@
   <link rel="stylesheet" href="assets/css/component.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <script src="assets/js/common.js"></script>
-  
+
   <!-- page -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/board.css">
   <title>무빙</title>
 </head>
-<body> 
+
+<body>
   <!-- root -->
   <div id="root">
     <header id="header" class="header">
@@ -31,21 +33,21 @@
           <ul id="gnb" class="gnb">
             <!-- 링크 -> a / 2뎁스 버튼 -> button:button -->
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>예매</span>
-            </a></li>
+                <span>예매</span>
+              </a></li>
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>영화</span>
-            </a></li>
+                <span>영화</span>
+              </a></li>
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>영화관</span>
-            </a></li>
+                <span>영화관</span>
+              </a></li>
             <!-- TODO: 스낵 진행시 주석제거 -->
             <!-- <li class="gnb__item"><a href="#" class="gnb__link">
               <span>스낵</span>
             </a></li> -->
             <li class="gnb__item"><a href="noticeList.html" class="gnb__link">
-              <span>공지사항</span>
-            </a></li>
+                <span>공지사항</span>
+              </a></li>
             <li class="gnb__item">
               <button type="button" class="gnb__link">
                 <span>마이페이지</span>
@@ -94,7 +96,24 @@
     <main id="main" class="main">
       <h2 class="blind">메인 컨텐츠</h2>
       <div id="container" class="container">
-        <!-- 컨텐츠 영역 -->
+        <div class="as_board">
+          <div class="as_board__view">
+            <div class="as_board__head">
+              <h4 class="as_board__title">게시글 제목</h4>
+              <div class="as_board__hit">
+                <span>조회 조회수</span>
+                <span>YYYY-MM-DD</span>
+              </div>
+            </div>
+            <div class="as_board__content">
+              ~게시판 내용 영역~
+            </div>
+          </div>
+
+          <div class="as_board__footer">
+            <a href="noticeList.html" class="btn-board-list">목록</a>
+          </div>
+        </div>
       </div>
     </main>
     <!-- //main -->
@@ -104,8 +123,10 @@
       <div class="footer__inner">
         <i class="footer__logo"><img src="assets/images/common/logo--gray.png" alt="무빙"></i>
         <ul class="footer__util">
-          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link">이용약관</a></li>
-          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link footer__privacy">개인정보처리방침</a></li>
+          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link">이용약관</a>
+          </li>
+          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림"
+              class="footer__util-link footer__privacy">개인정보처리방침</a></li>
         </ul>
         <ul class="footer__info">
           <li class="footer__info-item">(06129) 서울특별시 강남구 강남대로96길 16 2층~5층 (역삼동, 원성빌딩)</li>
@@ -126,4 +147,5 @@
   </div>
   <!-- // layer 영역: modal, toast etc,. -->
 </body>
+
 </html>
