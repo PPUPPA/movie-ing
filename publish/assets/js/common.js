@@ -13,6 +13,19 @@ $(function(){
     isGnbExpand();
   });
 
+  // main visual
+  $(".as_main-visual__video-wrap").on("mouseover", function(){
+    $(this).addClass("is-play");
+    $(".as_main-visual__img").stop().hide();
+    $(".as_main-visual__video").get(0).play();
+  });
+  $(".as_main-visual__video-wrap").on("mouseout", function(){
+    $(this).removeClass("is-play");
+    $(".as_main-visual__img").stop().show();
+    $(".as_main-visual__video").get(0).pause();
+    $(".as_main-visual__video").get(0).currentTime = 0;
+  });
+
   // SRCH INPUT
   $(".board-head .srch-box .btn-del").click(function(){
 		$(this).prev(".inp").val("");
