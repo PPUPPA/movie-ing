@@ -123,6 +123,12 @@
   color: #444;
 }
 
+/* container */
+.container.is-fullwidth {
+  width: auto;
+  max-width: unset;
+}
+
 /* footer */
 .footer {
   padding: 45px 0;

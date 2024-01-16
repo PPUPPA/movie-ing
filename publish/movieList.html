@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,13 @@
   <link rel="stylesheet" href="assets/css/component.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <script src="assets/js/common.js"></script>
-  
+
   <!-- page -->
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/movie.css">
   <title>무빙</title>
 </head>
-<body> 
+
+<body>
   <!-- root -->
   <div id="root">
     <header id="header" class="header">
@@ -31,21 +33,21 @@
           <ul id="gnb" class="gnb">
             <!-- 링크 -> a / 2뎁스 버튼 -> button:button -->
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>예매</span>
-            </a></li>
-            <li class="gnb__item"><a href="movieList.html" class="gnb__link">
-              <span>영화</span>
-            </a></li>
+                <span>예매</span>
+              </a></li>
+            <li class="gnb__item is-active"><a href="movieList.html" class="gnb__link">
+                <span>영화</span>
+              </a></li>
             <li class="gnb__item"><a href="#" class="gnb__link">
-              <span>영화관</span>
-            </a></li>
+                <span>영화관</span>
+              </a></li>
             <!-- TODO: 스낵 진행시 주석제거 -->
             <!-- <li class="gnb__item"><a href="#" class="gnb__link">
               <span>스낵</span>
             </a></li> -->
             <li class="gnb__item"><a href="noticeList.html" class="gnb__link">
-              <span>공지사항</span>
-            </a></li>
+                <span>공지사항</span>
+              </a></li>
             <li class="gnb__item">
               <button type="button" class="gnb__link">
                 <span>마이페이지</span>
@@ -92,9 +94,47 @@
 
     <!-- main -->
     <main id="main" class="main">
-      <h2 class="blind">메인 컨텐츠</h2>
+      <h2 class="blind">영화 리스트</h2>
       <div id="container" class="container">
-        <!-- 컨텐츠 영역 -->
+        <div class="as_movie-list">
+          <div class="tabs1 type2">
+            <span class="tabs1__item is-active">일반영화</span>
+
+            <div class="search">
+              <input type="text" id="srchMovie" class="inp-mv" placeholder="영화명을 입력해주세요.">
+              <button class="btn-del" style="display: none;">삭제</button>
+              <button class="btn-srch">검색</button>
+            </div>
+          </div>
+
+          <div class="sorting">
+            <button type="button" class="is-active">예매순</button>
+            <button type="button">가나다순</button>
+          </div>
+
+          <div class="movie-list slider-type1">
+            <ul>
+              <li>
+                <div class="item">
+                  <figure class="thumb">
+                    <div class="thumb__img">
+                      <img src="https://img.dtryx.com/poster/2023/11/2B3FEE8B-319E-4646-B95E-0D429977AC06.small.jpg"
+                        onerror="this.src='/resources/img/common/no-poster.png';" alt="서울의 봄 포스터">
+                      <span class="target"><i class="age12"></i></span>
+                    </div>
+                    <div class="btns">
+                      <a href="#" class="b1">영화정보</a>
+                      <a href="#" class="b2">예매하기</a>
+                    </div>
+                  </figure>
+                  <figcaption class="info">
+                    <div class="subj">서울의 봄</div>
+                  </figcaption>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
     <!-- //main -->
@@ -104,8 +144,10 @@
       <div class="footer__inner">
         <i class="footer__logo"><img src="assets/images/common/logo--gray.png" alt="무빙"></i>
         <ul class="footer__util">
-          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link">이용약관</a></li>
-          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link footer__privacy">개인정보처리방침</a></li>
+          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림" class="footer__util-link">이용약관</a>
+          </li>
+          <li class="footer__util-item"><a href="#" target="_blank" title="새창에서 열림"
+              class="footer__util-link footer__privacy">개인정보처리방침</a></li>
         </ul>
         <ul class="footer__info">
           <li class="footer__info-item">(06129) 서울특별시 강남구 강남대로96길 16 2층~5층 (역삼동, 원성빌딩)</li>
@@ -126,4 +168,5 @@
   </div>
   <!-- // layer 영역: modal, toast etc,. -->
 </body>
+
 </html>
